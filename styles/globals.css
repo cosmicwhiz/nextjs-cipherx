@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(to bottom, rgb(20, 20, 20), black);
+  height: 100vh;
+  width: 100%;
 }
 
 input {
@@ -18,7 +20,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.4rem;
+  margin-top: 1rem;
 }
 
 .heading {
@@ -26,7 +28,7 @@ input {
   background-clip: text;
   color: transparent;
   font-family: var(--font-poppins);
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .nav_container {
@@ -50,28 +52,74 @@ input {
   font-family: var(--font-poppins);
 }
 
-.description {
+.chat_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.character_chat {
+  display: flex;
+  width: 80vw;
+  max-width: 25.5rem;
   color: white;
   font-family: var(--font-inter);
-  margin: 1rem 0;
-  font-size: 0.98rem;
+  margin: 0.4rem;
+  padding: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+}
+
+.character {
+  min-width: 33%;
 }
 
 .cipher_guard {
   color: #e62bff;
 }
 
+.nav_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_button {
+  cursor: pointer;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 20px;
+  font-family: var(--font-inter);
+  text-decoration: none;
+  padding: 0.55rem;
+  width: 7.5rem;
+  height: 2.5rem;
+  text-align: center;
+}
+
+.white_button {
+  color: black;
+  background-color: white;
+  font-weight: 500;
+}
+
+.white_button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
 .pass_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
   padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.671);
   background-color: #131313;
   border-radius: 5px;
+  max-width: 20rem;
 }
 
 .password {
-  min-width: 18rem;
+  width: 18rem;
   height: 2.2rem;
   outline: none;
   border: none;
@@ -114,6 +162,23 @@ input {
   background-color: #000000;
 }
 
+.go_back_button {
+  color: rgb(233, 233, 233);
+  width: 7.5rem;
+  height: 2rem;
+  padding: 0.4rem 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-family: var(--font-inter);
+  text-decoration: none;
+}
+
+.go_back_button:hover {
+  background-color: rgba(75, 75, 75, 0.486);
+}
 
 .pass_requirement {
   margin-top: 0.2rem;
@@ -129,7 +194,7 @@ input {
   justify-content: center;
   padding: 1rem;
   padding-top: 0.7rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   border: 1px dashed rgb(95, 95, 95);
   border-radius: 10px;
 }
@@ -225,13 +290,15 @@ input {
   .upvote_button:active,
   .vote_format_toggle_button:active,
   .upvote_button:hover,
-  .vote_format_toggle_button:hover {
+  .vote_format_toggle_button:hover,
+  .white_button:hover, 
+  .go_back_button:hover {
     background: none;
   }
 }
 
 @media (max-width: 390px) {
-  .description {
+  .character_chat {
     font-size: 4vw;
   }
 }

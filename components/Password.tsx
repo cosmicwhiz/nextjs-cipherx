@@ -71,11 +71,13 @@ export const Password = () => {
             <button className='pass_btn' id='show_hide_btn' onClick={handlePasswordVisibility}>{visibilityLabel}</button>
             <button className='pass_btn' id='clear_btn' onClick={handleClearPassword}>Clear</button>
         </div>
-        <p className='pass_requirement'>- Must be at least 8 characters long</p>
-        <p className='pass_requirement'>- Must contain an uppercase letter</p>
-        <p className='pass_requirement'>- Must contain a lowercase letter</p>
-        <p className='pass_requirement'>- Must contain a special character</p>
-        <p className='pass_requirement'>- Must contain a numeric digit</p>
+        <div className='requirements'>
+          <p className='pass_requirement'>- Must be at least 8 characters long</p>
+          <p className='pass_requirement'>- Must contain an uppercase letter</p>
+          <p className='pass_requirement'>- Must contain a lowercase letter</p>
+          <p className='pass_requirement'>- Must contain a special character</p>
+          <p className='pass_requirement'>- Must contain a numeric digit</p>
+        </div>   
     </div>
   )
 }

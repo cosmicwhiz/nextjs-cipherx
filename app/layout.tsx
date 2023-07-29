@@ -1,6 +1,5 @@
 import './../styles/globals.css'
 import type { Metadata } from 'next'
-import Nav from '@/components/Nav'
 import { Inter, Poppins, Orbitron, Exo_2 } from 'next/font/google'
 
 const inter = Inter({
@@ -42,7 +41,6 @@ export default function RootLayout({
       <link rel='icon' href='/favicon.ico'/>
       <body>
         <main className='app'>
-          <Nav />
           {children}
         </main>
       </body>
