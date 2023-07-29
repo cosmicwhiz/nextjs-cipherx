@@ -9,12 +9,15 @@ export const Password = () => {
   const [passStrengthColor, setPassStrengthColor] = useState<string>("");
   const [passwordStrenghtLabel, setPasswordStrenghtLabel] = useState<string>("");
 
+  /**
+   * @dev five checks to get the strength of the password and display it accordingly
+   * @param inputValue gets the value of the password input
+   */
   const checkPasswordStrength = (inputValue: string) => {
     let passStrength = 0;
     const specialChars = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
     const length = inputValue.length
     if (length) {
-        console.log("checking Strength")
         if (length >= 8) passStrength += 1
         if (inputValue !== inputValue.toLowerCase()) passStrength += 1
         if (inputValue !== inputValue.toUpperCase()) passStrength += 1
@@ -36,11 +39,13 @@ export const Password = () => {
     }
   }
 
+  /* Set the value in the password input on input change */
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPasswordValue(event.target.value)
     checkPasswordStrength(event.target.value)
   }
 
+  /* Set the visibility of the entered password and change visibility button labels */
   const handlePasswordVisibility = () => {
     if (inputType == "password") {
         setVisibilityLabel("Hide")
@@ -52,6 +57,7 @@ export const Password = () => {
     }   
   }
 
+  /* clear the password input on clicking clear button */
   const handleClearPassword = () => {
     setPasswordValue('')
     setPasswordStrenghtLabel('')
