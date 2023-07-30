@@ -13,14 +13,14 @@ const Nav = ({ launchedApp }: NavInterface) => {
             <Image src="/images/logo.png" alt="CipherX Logo" width={32} height={32}></Image>
             <p className="logo_text">CipherX</p>
         </Link>
+        <div className="nav_buttons">
         {
-          launchedApp ? <></> :
-          <div className="nav_buttons">
-            <Link href="/cipherApp" className="nav_button white_button" target="_blank">
+          launchedApp ? <Link href="/" className="go_back_button no_margin">Go Back</Link> :
+            <Link href="/cipherApp" className="nav_button white_button">
                 Launch App
             </Link>
-          </div>
         }
+        </div>
     </nav>
   )
 }

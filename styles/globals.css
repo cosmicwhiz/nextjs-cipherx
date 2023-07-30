@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(20, 20, 20), black);
+  background: linear-gradient(to bottom, black, rgb(20, 20, 20));
   height: 100vh;
   width: 100%;
 }
@@ -29,6 +29,10 @@ input {
   color: transparent;
   font-family: var(--font-poppins);
   font-size: 2.2rem;
+}
+
+.sub {
+  font-size: 1.5rem;
 }
 
 .nav_container {
@@ -78,6 +82,10 @@ input {
   color: #e62bff;
 }
 
+.coordinator {
+  color: royalblue;
+}
+
 .nav_buttons {
   display: flex;
   align-items: center;
@@ -87,12 +95,13 @@ input {
 .nav_button {
   cursor: pointer;
   border: 1px solid rgb(216, 216, 216);
-  border-radius: 20px;
+  border-radius: 15px;
   font-family: var(--font-inter);
   text-decoration: none;
-  padding: 0.55rem;
+  padding: 0.4rem;
   width: 7.5rem;
-  height: 2.5rem;
+  height: 2rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -103,14 +112,14 @@ input {
 }
 
 .white_button:hover {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(231, 231, 231);
 }
 
 .pass_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem auto;
+  margin: auto;
   padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.671);
   background-color: #131313;
@@ -167,13 +176,17 @@ input {
   width: 7.5rem;
   height: 2rem;
   padding: 0.4rem 1rem;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   text-align: center;
   border: 1px solid rgb(216, 216, 216);
   border-radius: 20px;
   font-size: 0.9rem;
   font-family: var(--font-inter);
   text-decoration: none;
+}
+
+.no_margin {
+  margin-top: 0;
 }
 
 .go_back_button:hover {
@@ -287,11 +300,32 @@ input {
     display: none;
   }
 
+  .nav_button {
+    width: 25vw;
+    max-width: 7.5rem;
+    min-height: 2rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    padding-top: 0.5rem;
+    background-color: white;
+  }
+
+  .go_back_button {
+    width: 25vw;
+    max-width: 7.5rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    padding-top: 0.45rem;
+  }
+
+  .nav_container {
+    padding: 1rem 1rem;
+  }
+
   .upvote_button:active,
   .vote_format_toggle_button:active,
   .upvote_button:hover,
   .vote_format_toggle_button:hover,
-  .white_button:hover, 
   .go_back_button:hover {
     background: none;
   }
